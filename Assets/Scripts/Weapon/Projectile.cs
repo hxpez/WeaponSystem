@@ -24,8 +24,8 @@ public class Projectile : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Debug.Log("hitted enemy");
-            Material mat = other.GetComponent<Material>();
-            mat.color = Color.red;
+            MeshRenderer meshRenderer = other.GetComponent<MeshRenderer>();
+            meshRenderer.material.color = Color.red;
         }
     }
 
