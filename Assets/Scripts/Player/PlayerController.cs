@@ -10,6 +10,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 _movementInput;
     private void Awake()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+
         _rb = GetComponent<Rigidbody>();
     }
 
