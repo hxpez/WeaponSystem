@@ -1,14 +1,12 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField, Header("Attributes")] private float _speed, _lifeSpan;
-    [SerializeField] private int _damage;
+    [SerializeField] private float _speed, _lifeSpan;
+    [SerializeField] private int _dmg;
 
-    [SerializeField, Header("References")] private Rigidbody _rb;
-
+    private Rigidbody _rb;
     private Vector3 _direction;
 
     private void OnEnable()
@@ -24,22 +22,18 @@ public class Projectile : MonoBehaviour
         if (other.CompareTag("Enemy"))
         {
             Debug.Log("hitted enemy");
-            MeshRenderer meshRenderer = other.GetComponent<MeshRenderer>();
-            meshRenderer.material.color = Color.red;
         }
     }
 
     public void Fire()
     {
         _rb.AddForce(_direction * _speed, ForceMode.Impulse);
-        StartCoroutine(WaitBeforeDestroy(_lifeSpan));
+        StartCoroutine(WaitBeforeDestroy());
     }
 
-    private IEnumerator WaitBeforeDestroy(float time)
+    private IEnumerator WaitBeforeDestroy()
     {
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(_lifeSpan);
         Destroy(gameObject);
     }
-
-
 }
