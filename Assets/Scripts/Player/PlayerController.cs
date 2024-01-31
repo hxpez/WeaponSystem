@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody _rb;
 
     private Vector2 _movementInput;
+    [SerializeField] private Transform _cameraTransform;
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -27,7 +29,10 @@ public class PlayerController : MonoBehaviour
 
     private void Move()
     {
-        Vector3 movementVector = (transform.right * _movementInput.x + transform.forward * _movementInput.y).normalized;
+        //Vector3 movementVector = (transform.right * _movementInput.x + transform.forward * _movementInput.y).normalized;
+        //_rb.velocity = movementVector * _speed;
+
+        Vector3 movementVector = Quaternion.Euler(0, _cameraTransform.eulerAngles.y, 0) * new Vector3(_movementInput.x, 0, _movementInput.y);
         _rb.velocity = movementVector * _speed;
     }
 }
