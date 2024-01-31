@@ -36,7 +36,8 @@ public class CameraController : MonoBehaviour
 
         _xRotation = Mathf.Clamp(_xRotation, _minX, _maxX);
 
-        transform.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
-        _player.rotation = Quaternion.Euler(0, _yRotation, 0);
+        transform.localEulerAngles = new Vector2(_xRotation, _yRotation);
+        //transform.rotation = Quaternion.Euler(_xRotation, _yRotation, 0);
+        //_player.rotation = Quaternion.Euler(0, _yRotation, 0);
     }
 }

@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1f10b9ba2699a429b79e00b5a7c66b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _target: {fileID: 0}
   _audioSource: {fileID: 0}
 --- !u!1 &76041813
 GameObject:
@@ -12530,6 +12531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f1f10b9ba2699a429b79e00b5a7c66b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _target: {fileID: 7649048105799047925}
   _audioSource: {fileID: 3103239848260113133}
 --- !u!82 &3103239848260113133
 AudioSource:
@@ -14576,6 +14578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 5
   _rb: {fileID: 0}
+  _cameraTransform: {fileID: 963194228}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
