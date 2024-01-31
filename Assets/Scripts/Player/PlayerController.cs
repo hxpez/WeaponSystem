@@ -13,8 +13,6 @@ public class PlayerController : MonoBehaviour
         Cursor.lockState = CursorLockMode.Locked;
 
         _rb = GetComponent<Rigidbody>();
-
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
     private void Update()
