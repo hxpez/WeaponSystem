@@ -16,7 +16,7 @@ public class CameraController : MonoBehaviour
 
     private Vector2 _viewRotationInput;
 
-    private void FixedUpdate()
+    private void Update()
     {
         Rotation();
     }
