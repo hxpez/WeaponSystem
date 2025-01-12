@@ -69,6 +69,10 @@ public class WeaponWithRaycast : MonoBehaviour
             {
                 enemy.TakeDamage();
             }
+            else if(hit.collider.TryGetComponent(out Cube cube))
+            {
+                cube.ChangeColor();
+            }
         }
     }
 
