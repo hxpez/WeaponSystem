@@ -450,6 +450,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ae3d1366-6ae2-49b5-80e8-e00e9416e92c
     m_ActionName: Default/SHOOT[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9094124325058218114}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnJUMP
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: ea9f24c6-9bb6-4d05-b52f-9b198455e5ab
+    m_ActionName: Default/JUMP[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Default
@@ -1975,6 +1991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  _jumpForce: 5
   _rb: {fileID: 0}
   _cameraTransform: {fileID: 963194228}
 --- !u!1660057539 &9223372036854775807
