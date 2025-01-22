@@ -1356,6 +1356,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: ae3d1366-6ae2-49b5-80e8-e00e9416e92c
     m_ActionName: Default/SHOOT[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9094124325058218114}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnJUMP
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c00687ec-189b-4399-8ac6-f0152f026d3d
+    m_ActionName: Default/JUMP[/Keyboard/space]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Default
@@ -11638,7 +11654,7 @@ GameObject:
   - component: {fileID: 5341470024205445023}
   - component: {fileID: 3260174708065924358}
   - component: {fileID: 7040986865199804032}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14576,6 +14592,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 5
+  _jumpForce: 5
   _rb: {fileID: 0}
   _cameraTransform: {fileID: 963194228}
 --- !u!114 &9094124325058218115
@@ -14585,7 +14602,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8621901907687236368}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a47c50d08c53ed4f9bdde1b3cdcc0b5, type: 3}
   m_Name: 
